@@ -1,38 +1,292 @@
 .App {
-  text-align: center;
+  background:linear-gradient(165deg, #FCF3DB, #FCF3DB 55%, white 45%, white);
+  height: auto;
+  padding: 10rem 18rem 5rem 24rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Navbar CSS */
+
+.heading {
+  color: #4E598C;
+  font-size: 2.3rem;
+  margin-bottom: 2.3rem;
+  font-weight: 700;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: #F2994A;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.navBar a {
+  text-decoration: none;
+  color: #BDBDBD;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.navBar a:last-child {
+  padding-right: 25px !important;
+} 
+
+
+.active {
+  height: 10px;
+  width: auto;
+  margin: 1rem -5px -1.9rem;
+  background-color: #F2994A;
+  border-radius: 4px;
+
+}
+
+.active_link {
+  color: #F2994A!important;
+}
+
+/* Forms CSS */
+
+form {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin: 2rem 0 1rem;
+
+}
+
+input {
+  height: 55px;
+  width: 100%;
+  border: 1.5px solid #4E598C;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 2.3rem;
+
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+.required {
+  color: red;
+  margin-left: 10px;
+}
+
+label {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: 20px;
+}
+
+form p {
+  color: #817E9E;
+}
+
+input::placeholder {
+  font-size: 1.2rem;
+  padding-left: 20px;
+}
+
+input:focus {
+  outline: none
+}
+
+select {
+  width: 15rem;
+  height: 3.5rem;
+  margin-top: 20px;
+  margin-bottom: 2.3rem;
+  border: 1.5px solid #4E598C;
+  border-radius: 8px;
+  font-size: 1rem;
+  padding-left: 20px;
+}
+
+select:focus {
+  outline: none
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.location input{
+  width: 25rem;
+}
+
+.buttons {
+  display: flex;
+
+  height: 3.5rem;
+  width: 80%;
+  margin-top: 3rem;
+
+}
+
+.buttons button {
+  width: 14rem;
+  border-radius: 12px;
+  font-size: 1.2rem;
+}
+
+.buttons a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.buttons button:last-child {
+  margin-left: 4.5rem;
+}
+
+.button1 {
   color: white;
+  border: none;
+  background: linear-gradient(#F2C24C, #F2A74B);
 }
 
-.App-link {
-  color: #61dafb;
+.button2 {
+  color:#4E598C;
+  border: none;
+  background: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.card_details {
+  display: flex;
+  justify-content: space-between;
+}
+
+.card_detail {
+  width: 50%;
+}
+
+.expiry_date {
+  width: 25%;
+}
+
+.cvv {
+  width: 15%;
+}
+
+/* Payment Css */
+.payment {
+  background-color: white;
+  border-radius: 12px;
+
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+
+  margin: 4rem 0 4rem;
+
+  width: 100%;
+  font-size: 1.2rem;
+  color: #4E598C;
+
+  box-shadow: 2px 4px 4px 4px rgba(245,238,238,0.75);
+} 
+
+.payment hr {
+  height: 1px;
+  width: 85%;
+  margin: auto;
+  background-color: #4E598C;
+  margin-bottom: 2.3rem;
+}
+
+.info1, 
+.info2,
+.info3,
+.info4 {
+  display: flex;
+  flex-direction: row;
+  width: 85%;
+
+  justify-content: space-between;
+  margin :auto;
+  font-size: 1.3rem;
+  margin-bottom: 2.3rem;
+
+}
+
+.info1 {
+  background: #2F80ED;
+  width: 100%;
+  background-size: 100% !important;
+  padding: 1.5rem 0 1.5rem;
+  color: white;
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
+}
+
+.item1 {
+  margin-left: 7.5%;
+}
+
+.item2 {
+  margin-right: 12%;
+}
+
+.info4 {
+  border: 1px solid #4E598C;
+  padding: 1rem 0.5rem;
+}
+
+.black {
+  color: black;
+}
+
+.image {
+  height: 1rem;
+  width: 1.4rem;
+  margin: 0 10px;
+}
+
+
+/* Purchase CSS */
+.success {
+  width: 54vw;
+  background-color: white;
+  border-radius: 12px;
+  z-index: 1;
+  margin: auto  -5rem 0;
+  padding: 4rem 0 5rem 0;
+  box-shadow: 2px 4px 4px 4px rgba(245,238,238,0.75);
+}
+
+.purchase img {
+  height: 50px;
+  margin: 0 12rem;
+  background: white;
+  border-radius: 50%;
+  z-index: 1;
+  padding: 15px;
+  box-shadow: 2px 4px 4px 4px rgba(245,238,238,0.75);
+}
+
+
+
+.purchase {
+  width: 70%;
+  margin: auto;
+  padding-bottom: 1.5rem;
+}
+
+.purchase h1 {
+  color: #4E598C;
+  font-size: 2.7rem;
+}
+
+.purchase p {
+  font-size: 1.3rem;
+  line-height: 2;
+  font-weight: light;
+}
+
+a {
+  padding-top: 1.5rem;
+  color: #F2994A;
+  font-weight: 400;
+  font-size: 1.3rem;
 }
